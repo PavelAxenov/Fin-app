@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/Inter-Bold.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../fonts/Inter-ExtraBold.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/Mulish-Bold.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../fonts/Mulish-ExtraBold.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(../fonts/Mulish-Black.ttf) format("ttf");
+}
