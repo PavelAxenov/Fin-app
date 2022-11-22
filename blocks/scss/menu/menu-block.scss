@@ -1,0 +1,30 @@
+.navigation {
+    position: absolute;
+    display: grid;
+    grid-template-rows: repeat(5, 35px);
+    background-color: #fff;
+    gap: 15px;
+    left: -350px;
+    transition: left .2s linear;
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10px;
+        width: 250px;
+
+        &_img {
+            margin-right: 10px;
+        }
+
+        &_text {
+            font-size: medium;
+            font-weight: 500;
+        }
+    }
+
+    &--active {
+        left: 0;
+    }
+}

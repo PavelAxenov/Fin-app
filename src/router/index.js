@@ -1,13 +1,37 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AboutView from '../views/AboutView.vue'
+import Dashboard from '../views/DashboardView.vue'
 
 const routes = [
-  
   {
     path: '/',
-    name: 'about',
-    component: AboutView
-  }
+    name: 'dashboard',
+    component: Dashboard
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: Dashboard
+  },
+  // {
+  //   path: '/wallet',
+  //   name: 'about',
+  //   component: Wallets
+  // },
+  // {
+  //   path: '/chart',
+  //   name: 'about',
+  //   component: Chart
+  // },
+  // {
+  //   path: '/transfer',
+  //   name: 'about',
+  //   component: Transactions
+  // },
+  // {
+  //   path: '/settings',
+  //   name: 'about',
+  //   component: Settings
+  // },
 ]
 
 const router = createRouter({

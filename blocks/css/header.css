@@ -21,11 +21,6 @@ header .header .logo__menu {
 header .header .logo__menu:hover {
   cursor: pointer;
 }
-@media (min-width: 1025px) {
-  header .header .logo__menu {
-    display: none;
-  }
-}
 header .header .user {
   display: flex;
   align-items: center;

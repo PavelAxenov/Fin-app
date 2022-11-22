@@ -1,17 +1,14 @@
 <template>
-  <div class="about">
-    <Header />2
-  </div>
-
+  <div class="about">2</div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
+// import Header from '@/components/Header.vue'
 
 export default {
-  name: 'HomeView',
+  name: 'AboutView',
   components: {
-    Header
+    // Header
   }
 }
 </script>

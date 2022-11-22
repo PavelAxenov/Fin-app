@@ -21,10 +21,6 @@ header {
                 &:hover {
                     cursor: pointer;
                 }
-
-                @media (min-width: 1025px) {
-                    display: none;
-                }
             }
         }
 
