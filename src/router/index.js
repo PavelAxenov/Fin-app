@@ -1,22 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Dashboard from '../views/DashboardView.vue'
+import DashboardView from '../views/DashboardView.vue'
+import WalletsView from '../views/WalletsView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'dashboard',
-    component: Dashboard
-  },
-  {
-    path: '/dashboard',
-    name: 'dashboard',
-    component: Dashboard
+    component: DashboardView
   },
   // {
-  //   path: '/wallet',
-  //   name: 'about',
-  //   component: Wallets
+  //   path: '/dashboard',
+  //   name: 'dashboard',
+  //   component: DashboardView
   // },
+  {
+    path: '/wallet',
+    name: 'about',
+    component: WalletsView
+  },
   // {
   //   path: '/chart',
   //   name: 'about',

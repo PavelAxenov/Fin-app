@@ -3,29 +3,30 @@ export default {
         isMenuOpen: false,
         menuArr: [
             {
-                id: 'dashboard',
+                url: '/',
                 name: 'Dashboard',
-                img_name: 'dashboard'
+                img_name: 'dashboard',
+                exact: true
             },
             {
-                id: 'wallet',
+                url: '/wallet',
                 name: 'Wallets',
-                img_name: 'wallet'
+                img_name: 'wallet',
             },
             {
-                id: 'chart',
+                url: '/chart',
                 name: 'Reports',
-                img_name: 'chart'
+                img_name: 'chart',
             },
             {
-                id: 'transfer',
+                url: '/transfer',
                 name: 'Transactions',
-                img_name: 'transfer'
+                img_name: 'transfer',
             },
             {
-                id: 'settings',
+                url: '/settings',
                 name: 'Settings',
-                img_name: 'settings'
+                img_name: 'settings',
             },
         ]
     },

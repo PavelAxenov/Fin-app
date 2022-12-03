@@ -1,20 +1,20 @@
 <template>
   <main>
-    <section class="container main">
+    <section class="container">
       <Menu />
-      <router-view/>
+      <router-view />
     </section>
   </main>
 </template>
 
 <script>
-import Menu from '@/components/Menu.vue'
+import Menu from "@/components/menu/Menu.vue";
 
 export default {
-  name: 'Main-component',
+  name: "Main-component",
 
   components: {
-    Menu
-  }
-}
+    Menu,
+  },
+};
 </script>

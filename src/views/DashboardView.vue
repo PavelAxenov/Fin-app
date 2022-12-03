@@ -1,12 +1,14 @@
 <template>
-  <h1>pkljikh</h1>
+  <Dashboard />
 </template>
 
 <script>
+import Dashboard from "@/components/Dashboard.vue";
 
 export default {
   name: 'DashboardView',
   components: {
+    Dashboard
   }
 }
 </script>
