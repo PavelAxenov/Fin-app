@@ -1,0 +1,113 @@
+.wallets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 15px;
+}
+@media (max-width: 540px) {
+  .wallets-header {
+    flex-direction: column;
+  }
+}
+.wallets-header__title {
+  font-size: 30px;
+}
+@media (max-width: 540px) {
+  .wallets-header__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+.wallets-header__info {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 540px) {
+  .wallets-header__info {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.wallets-header__info-count {
+  font-size: 20px;
+  margin-right: 15px;
+}
+@media (max-width: 540px) {
+  .wallets-header__info-count {
+    font-size: 18px;
+  }
+}
+.wallets-header__info-search {
+  border-radius: 10px;
+  border-color: rgba(128, 128, 128, 0.199);
+  padding: 0 10px;
+}
+@media (max-width: 540px) {
+  .wallets-header__info-search {
+    width: 120px;
+  }
+}
+
+.wallets {
+  padding: 0 10px;
+  margin-top: 20px;
+}
+.wallets__blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, max-content));
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(170px, auto);
+  grid-gap: 15px;
+  justify-content: center;
+}
+.wallets__blocks-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../../images/wallets/wallet-background.svg) no-repeat;
+  object-fit: cover;
+  background-size: 100%;
+  width: 200px;
+}
+.wallets__blocks-item .item-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 20px;
+  gap: 8px;
+}
+.wallets__blocks-item .item-info__name {
+  font-size: 20px;
+  font-weight: 700;
+}
+.wallets__blocks-item .item-info__balance {
+  font-weight: 600;
+  color: rgb(0, 0, 248);
+}
+.wallets__blocks-item .item-info__transfer--red {
+  font-size: 15px;
+  color: rgb(230, 0, 0);
+}
+.wallets__blocks-item .item-info__transfer--green {
+  font-size: 15px;
+  color: rgb(11, 211, 11);
+}
+.wallets__blocks-item .item-settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 20px;
+}
+.wallets__blocks-item .item-settings--edit {
+  width: 15px;
+}
+.wallets__blocks-item .item-settings--edit:hover {
+  cursor: pointer;
+}
+.wallets__blocks-item .item-settings--delete {
+  width: 15px;
+}
+.wallets__blocks-item .item-settings--delete:hover {
+  cursor: pointer;
+}

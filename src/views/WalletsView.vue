@@ -1,14 +1,14 @@
 <template>
-  <div class="about">2</div>
+  <Wallets />
 </template>
 
 <script>
-// import Header from '@/components/Header.vue'
+import Wallets from "@/components/Wallets.vue";
 
 export default {
-  name: 'AboutView',
+  name: "WalletsView",
   components: {
-    // Header
-  }
-}
+    Wallets,
+  },
+};
 </script>
