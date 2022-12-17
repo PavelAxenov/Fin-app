@@ -1,0 +1,78 @@
+.select-box {
+    position: relative;
+    width: 300px;
+
+    &__btn {
+        position: relative;
+        width: 100%;
+        height: 27px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 0.1rem solid rgb(223, 223, 223);
+        margin: 0;
+        padding: 0 25px 0 10px;
+        text-align: left;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .arrow {
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #000000;
+            border-right: 2px solid #000000;
+            margin-right: 0;
+
+            &-top {
+                position: absolute;
+                top: 38%;
+                right: 8px;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &:focus-within {
+            .arrow-top {
+                top: 15%;
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    &__drop {
+        position: absolute;
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+        background: #fff;
+
+        border: 1px solid rgba(128, 128, 128, 0.397);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+        overflow: hidden;
+        z-index: 2;
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            max-height: 210px;
+
+            &--item {
+                padding: 5px 0 5px 10px;
+                
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(163, 163, 163, 0.082);
+                }
+
+                label {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

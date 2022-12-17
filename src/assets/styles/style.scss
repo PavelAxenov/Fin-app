@@ -1,0 +1,12 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.scss);
+@import url(./common.scss);
+
+@import url(@/components/header/style_header/header.scss);
+@import url(@/components/menu/style_menu/menu.scss);
+
+@import url(@/components/dashboard/style_dashboard/dashboard.scss);
+@import url(@/components/wallets/style_wallets/wallets.scss);
+@import url(@/components/reports/style_reports/reports.scss);
+
+@import url(@/components/single_select/style_singleselect/single-select.scss);

@@ -10,6 +10,7 @@
     left: -350px;
     transition: left .2s linear;
     box-shadow: 10px 0px 5px rgba(163, 163, 163, 0.3);
+    z-index: 1;
 
     &__item {
         display: flex;

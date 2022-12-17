@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DashboardView from '../views/DashboardView.vue'
 import WalletsView from '../views/WalletsView.vue'
-import ChartView from '../views/ChartView.vue'
+import ReportsView from '../views/ReportsView.vue'
 
 const routes = [
   {
@@ -20,9 +20,9 @@ const routes = [
     component: WalletsView
   },
   {
-    path: '/chart',
-    name: 'chart',
-    component: ChartView
+    path: '/reports',
+    name: 'reports',
+    component: ReportsView
   },
   // {
   //   path: '/transfer',

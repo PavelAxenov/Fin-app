@@ -19,7 +19,7 @@ export default {
 
   computed: {
     renderImg() {
-      return require(`../../../images/menu/${this.item.img_name}.svg`);
+      return require(`../../assets/images/menu/${this.item.img_name}.svg`);
     },
     createRouter() {
       return `${this.item.url}`;

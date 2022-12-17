@@ -28,3 +28,13 @@ tr  {
     height: 40px;
     
 }
+
+.text-elepsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.selected {
+    background-color: rgba(163, 163, 163, 0.185);
+}

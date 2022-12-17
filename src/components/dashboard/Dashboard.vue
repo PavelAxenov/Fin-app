@@ -22,7 +22,9 @@
           <div class="payments__name">
             <img
               class="payments__item-logo"
-              :src="require(`../../images/transactions/${item.img_name}.svg`)"
+              :src="
+                require(`../../assets/images/transactions/${item.img_name}.svg`)
+              "
               :alt="item.img_name"
             />
             <p class="payments__item-category">{{ item.category }}</p>

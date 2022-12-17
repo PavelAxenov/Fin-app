@@ -14,7 +14,7 @@ export default {
                 img_name: 'wallet',
             },
             {
-                url: '/chart',
+                url: '/reports',
                 name: 'Reports',
                 img_name: 'chart',
             },

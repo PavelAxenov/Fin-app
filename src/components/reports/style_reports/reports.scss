@@ -1,26 +1,35 @@
-.reports-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 10px 15px;
+// .reports-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: baseline;
+//     padding: 10px 15px;
 
-    @media (max-width: 540px) {
-        flex-direction: column;
-    }
+//     @media (max-width: 540px) {
+//         flex-direction: column;
+//         gap: 20px;
+//     }
 
-    &__title {
-        font-size: 30px;
+//     &__title {
+//         font-size: 30px;
 
-        @media (max-width: 540px) {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-    }
-}
+//         @media (max-width: 540px) {
+//             font-size: 20px;
+//             margin-bottom: 10px;
+//         }
+//     }
+// }
 
 .reports {
     padding: 0 10px;
+    margin: 0 auto;
     margin-top: 20px;
+    
+    // &__head {
+        // color: red;
+    // }
+    // &__body {
+        // font-weight: bold;
+    // }
 
     &__blocks {
         display: grid;
@@ -35,7 +44,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: url(../../images/wallets/wallet-background.svg) no-repeat;
+            background: url(../../../assets/images/wallets/wallet-background.svg) no-repeat;
             object-fit: cover;
             background-size: 100%;
             width: 200px;
@@ -92,6 +101,36 @@
                         cursor: pointer;
                     }
                 }
+            }
+        }
+    }
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 10px 15px;
+    
+        @media (max-width: 540px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        &__title {
+            font-size: 30px;
+    
+            @media (max-width: 540px) {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__filters {
+            display: flex;
+            gap: 20px;
+
+            @media (max-width: 540px) {
+                flex-direction: column;
             }
         }
     }

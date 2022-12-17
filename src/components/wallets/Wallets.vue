@@ -36,12 +36,12 @@
         <div class="item-settings">
           <img
             class="item-settings--edit"
-            src="../../images/wallets/edit.svg"
+            src="../../assets/images/wallets/edit.svg"
             alt="edit"
           />
           <img
             class="item-settings--delete"
-            src="../../images/wallets/delete.svg"
+            src="../../assets/images/wallets/delete.svg"
             alt="delete"
           />
         </div>
