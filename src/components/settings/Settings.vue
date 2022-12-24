@@ -1,5 +1,5 @@
 <template>
-    <div>dfs</div>
+    <div></div>
 </template>
 
 <script>
