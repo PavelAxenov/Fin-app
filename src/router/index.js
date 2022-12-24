@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import DashboardView from '../views/DashboardView.vue'
 import WalletsView from '../views/WalletsView.vue'
 import ReportsView from '../views/ReportsView.vue'
+import SettingsView from '../views/SettingsView.vue'
 
 const routes = [
   {
@@ -9,14 +10,9 @@ const routes = [
     name: 'dashboard',
     component: DashboardView
   },
-  // {
-  //   path: '/dashboard',
-  //   name: 'dashboard',
-  //   component: DashboardView
-  // },
   {
     path: '/wallet',
-    name: 'about',
+    name: 'wallet',
     component: WalletsView
   },
   {
@@ -29,11 +25,11 @@ const routes = [
   //   name: 'about',
   //   component: Transactions
   // },
-  // {
-  //   path: '/settings',
-  //   name: 'about',
-  //   component: Settings
-  // },
+  {
+    path: '/settings',
+    name: 'settings',
+    component: SettingsView
+  },
 ]
 
 const router = createRouter({

@@ -1,36 +1,4 @@
-// .reports-header {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: baseline;
-//     padding: 10px 15px;
-
-//     @media (max-width: 540px) {
-//         flex-direction: column;
-//         gap: 20px;
-//     }
-
-//     &__title {
-//         font-size: 30px;
-
-//         @media (max-width: 540px) {
-//             font-size: 20px;
-//             margin-bottom: 10px;
-//         }
-//     }
-// }
-
 .reports {
-    padding: 0 10px;
-    margin: 0 auto;
-    margin-top: 20px;
-    
-    // &__head {
-        // color: red;
-    // }
-    // &__body {
-        // font-weight: bold;
-    // }
-
     &__blocks {
         display: grid;
         // grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -106,22 +74,35 @@
     }
 
     &-header {
+        .export-btn {
+            background-color: rgba(68, 0, 255, 0.692);
+            height: 40px;
+            border-radius: 20px;
+            padding: 5px 10px;
+            border: none;
+            color: #fff;
+            text-transform: uppercase;
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 7px grey;
+            }
+        }
+
         display: flex;
         justify-content: space-between;
         align-items: baseline;
         padding: 10px 15px;
-    
-        @media (max-width: 540px) {
+
+        @media (max-width: 800px) {
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
-    
+
         &__title {
             font-size: 30px;
-    
+
             @media (max-width: 540px) {
-                font-size: 20px;
-                margin-bottom: 10px;
+                margin-bottom: 0;
             }
         }
 
@@ -129,8 +110,110 @@
             display: flex;
             gap: 20px;
 
-            @media (max-width: 540px) {
+            @media (max-width: 800px) {
                 flex-direction: column;
+            }
+        }
+    }
+
+    &-table {
+        padding: 0 10px;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 70%;
+        border-collapse: collapse;
+
+        &:hover {
+            cursor: default;
+        }
+
+        @media (max-width: 800px) {
+            width: 95%;
+        }
+        @media (max-width: 630px) {
+            display: none;
+        }
+
+        thead {
+            background-color: rgba(0, 217, 255, 0.575);
+        }
+
+        &__body {
+            text-align: center;
+
+            tr {
+                &:hover {
+                    transform: scale(1.01);
+                    box-shadow: 0 0 5px rgba(11, 80, 228, 0.534);
+                }
+                &:nth-child(2n + 1) {
+                    background-color: rgba(0, 255, 255, 0.171);
+                }
+                &:nth-child(2n) {
+                    background-color: rgba(0, 26, 255, 0.171);
+                }
+            }
+        }
+
+        &__mob {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 15px 0;
+            background-color: rgba(0, 0, 255, 0.233);
+            border-radius: 20px;
+            padding: 5px 20px;
+
+            @media (min-width: 630px) {
+                display: none;
+            }
+
+            &--name {
+                display: flex;
+                flex-direction: column;
+
+                .place {
+                    font-family: "Mulish";
+                    font-weight: 800;
+                    font-size: 20px;
+                }
+
+                .category {
+                    font-weight: 500;
+                    font-size: 13px;
+                    font-stretch: ultra-expanded;
+                    color: rgb(141, 141, 141);
+                    margin-top: 5px;
+                    text-transform: uppercase;
+                }
+            }
+
+            &--transfer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .transfer {
+                    font-family: "Mulish";
+                    font-size: 20px;
+
+                    &--green {
+                        color: rgb(17 186 14);
+                    }
+
+                    &--red {
+                        color: red;
+                    }
+
+                    &__date {
+                        font-weight: 500;
+                        font-size: 15px;
+                        font-stretch: ultra-expanded;
+                        color: rgb(141, 141, 141);
+                        margin-top: 5px;
+                    }
+                }
             }
         }
     }
