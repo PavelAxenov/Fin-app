@@ -7,6 +7,6 @@ export default new Vuex.Store({
     modules: {
         dashboard,
         wallets,
-        settings
+        settings,
     }
 })

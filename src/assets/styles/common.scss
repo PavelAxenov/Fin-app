@@ -39,5 +39,13 @@ tr  {
     background-color: rgba(163, 163, 163, 0.185);
 }
 
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(28, 117, 219, 0.5);
+    padding: 15px 20px;
+    border-radius: 20px;
+}
 
 

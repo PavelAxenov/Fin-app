@@ -2,13 +2,19 @@
 @import url(../vendor/fonts/fonts.scss);
 @import url(./common.scss);
 
-@import url(@/components/header/style_header/header.scss);
-@import url(@/components/menu/style_menu/menu.scss);
+@import url(@/components/blocks/header_block/style_header/header.scss);
+@import url(@/components/blocks/menu_block/style_menu/menu.scss);
+@import url(@/components/blocks/chart_block/style_chart/chart.scss);
 
-@import url(@/components/dashboard/style_dashboard/dashboard.scss);
-@import url(@/components/wallets/style_wallets/wallets.scss);
-@import url(@/components/reports/style_reports/reports.scss);
 
-@import url(@/components/single_select/style_singleselect/single-select.scss);
-@import url(@/components/modal/style_modal/modal-window.scss);
-@import url(@/components/loader/style_loader/loader.scss);
+
+@import url(@/components/helpers/single_select/style_singleselect/single-select.scss);
+@import url(@/components/helpers/modal/style_modal/modal-window.scss);
+@import url(@/components/helpers/loader/style_loader/loader.scss);
+@import url(@/components/helpers/export_botton/style_export_btn/export-btn.scss);
+
+
+
+@import url(@/components/pages/dashboard/style_dashboard/dashboard.scss);
+@import url(@/components/pages/wallets/style_wallets/wallets.scss);
+@import url(@/components/pages/reports/style_reports/reports.scss);

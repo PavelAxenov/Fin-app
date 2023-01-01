@@ -20,11 +20,6 @@ const routes = [
     name: 'reports',
     component: ReportsView
   },
-  // {
-  //   path: '/transfer',
-  //   name: 'about',
-  //   component: Transactions
-  // },
   {
     path: '/settings',
     name: 'settings',

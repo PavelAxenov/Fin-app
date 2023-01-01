@@ -1,14 +1,14 @@
 <template>
-  <Reports />
+    <Reports />
 </template>
 
 <script>
-import Reports from "@/components/reports/Reports.vue";
+import Reports from "@/components/pages/reports/Reports-page.vue";
 
 export default {
-  name: "ReportsView",
-  components: {
-    Reports,
-  },
+    name: "ReportsView",
+    components: {
+        Reports,
+    },
 };
 </script>

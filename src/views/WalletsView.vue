@@ -1,14 +1,14 @@
 <template>
-  <Wallets />
+    <Wallets />
 </template>
 
 <script>
-import Wallets from "@/components/wallets/Wallets.vue";
+import Wallets from "@/components/pages/wallets/Wallets-page.vue";
 
 export default {
-  name: "WalletsView",
-  components: {
-    Wallets,
-  },
+    name: "WalletsView",
+    components: {
+        Wallets,
+    },
 };
 </script>

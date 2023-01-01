@@ -3,13 +3,13 @@
         <section class="container header">
             <div class="logo">
                 <img
-                    src="../../assets/images/burger-menu.svg"
+                    src="../../../assets/images/burger-menu.svg"
                     alt="logo"
                     class="logo__menu"
                     v-on:click="openMenu"
                 />
                 <img
-                    src="../../assets/images/logo.svg"
+                    src="../../../assets/images/logo.svg"
                     alt="logo"
                     class="logo__fin"
                 />
@@ -19,7 +19,7 @@
                 <p class="user__name">User Name</p>
 
                 <img
-                    src="../../assets/images/user-icon.svg"
+                    src="../../../assets/images/user-icon.svg"
                     alt="icon"
                     class="user__icon"
                 />

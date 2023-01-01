@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Settings from "@/components/settings/Settings.vue";
+import Settings from "@/components/pages/settings/Settings.vue";
 
 export default {
     name: "SettingsView",

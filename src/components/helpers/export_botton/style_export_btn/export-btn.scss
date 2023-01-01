@@ -1,0 +1,14 @@
+.export-btn {
+    background-color: rgba(68, 0, 255, 0.692);
+    height: 40px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 7px grey;
+    }
+}
