@@ -16,7 +16,7 @@
             </div>
 
             <router-link to="/settings" class="user">
-                <p class="user__name">User Name</p>
+                <p class="user__name">{{ getUserInfo.name }}</p>
 
                 <img
                     src="../../../assets/images/user-icon.svg"
@@ -28,24 +28,20 @@
     </header>
 </template>
 
-<script>
-import { mapMutations } from "vuex";
+<script setup>
+import { computed } from "vue";
+import { useStore } from "vuex";
+const store = useStore();
 
-export default {
-    name: "header-component",
+const isMenuOpen = computed(() => {
+    return store.getters.isMenuOpen;
+});
 
-    computed: {
-        isMenuOpen() {
-            return this.$store.getters.isMenuOpen;
-        },
-    },
+const getUserInfo = computed(() => {
+    return store.getters.getUserInfo;
+});
 
-    methods: {
-        ...mapMutations(["setMenuOpen"]),
-
-        openMenu() {
-            this.setMenuOpen(!this.isMenuOpen);
-        },
-    },
-};
+function openMenu() {
+    store.commit("setMenuOpen", !isMenuOpen.value);
+}
 </script>

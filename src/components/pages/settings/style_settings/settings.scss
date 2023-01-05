@@ -1,0 +1,147 @@
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 15px;
+
+    &__title {
+        font-size: 30px;
+
+        @media (max-width: 540px) {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__btn {
+        width: 100px;
+        height: 30px;
+        background-color: rgba(0, 0, 255, 0.705);
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        font-family: "Mulish";
+        font-size: 25px;
+
+        @media (max-width: 540px) {
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 5px grey;
+        }
+    }
+}
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .user-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+        margin-bottom: 15px;
+        gap: 10px;
+    }
+
+    .dashboard-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        @media (max-width: 540px) {
+            flex-direction: column;
+        }
+    }
+
+    .create-account {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        gap: 10px;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            max-width: 300px;
+        }
+
+        .btn-submit {
+            width: 100px;
+            height: 25px;
+            background-color: rgba(0, 0, 255, 0.5);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-family: "Mulish";
+            font-size: 20px;
+
+            @media (max-width: 540px) {
+                font-size: 18px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 5px grey;
+            }
+        }
+
+        .wallet-name {
+            border-radius: 10px;
+            border-color: rgba(128, 128, 128, 0.199);
+            padding: 0 10px;
+            width: calc(100% - 20px);
+            max-width: 300px;
+            height: 23px;
+
+            @media (max-width: 540px) {
+                width: 280px;
+            }
+        }
+    }
+
+    .details {
+        font-family: "Mulish";
+        font-size: 20px;
+        max-width: 300px;
+
+        summary {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__list {
+            margin-top: 10px;
+            padding-top: 10px;
+            padding-left: 20px;
+            border: 1px solid #000;
+            max-width: 300px;
+
+            &-item {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .password {
+        display: flex;
+        align-items: center;
+
+        .eye {
+            width: 20px;
+            margin-left: 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

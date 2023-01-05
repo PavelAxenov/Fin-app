@@ -1,8 +1,16 @@
 <template>
+    <div class="select-wallet">
+        <SingleSelect
+            ref="changeWallet"
+            :options="optionsWallet"
+            :dataArray="getWalletsArr"
+            :changeFunction="changeWalletFunction"
+        />
+    </div>
     <section class="dashboard">
         <div class="grid-item dashboard__balance">
             <h1>Total Balance</h1>
-            <strong>$ 4000.18</strong>
+            <strong>$ {{ data.select_wallet.balance }}</strong>
             <div class="dashboard__balance_btn">
                 <button class="top">top up</button>
                 <button class="withdraw">withdraw</button>
@@ -19,7 +27,7 @@
             <h1>Latest Transactions</h1>
             <div class="payments">
                 <div
-                    v-for="item in data.transactions_list"
+                    v-for="item in transactions_list"
                     v-bind:key="item.id"
                     class="payments__item"
                 >
@@ -54,147 +62,79 @@
 
 <script setup>
 import ChartBlock from "@/components/blocks/chart_block/Chart-block.vue";
+import SingleSelect from "@/components/helpers/single_select/SingleSelect.vue";
+import { computed, ref, reactive, onBeforeMount } from "vue";
+import { useStore } from "vuex";
 
-const data = {
+const store = useStore();
+
+const changeWallet = ref(null);
+
+const transactions_list = [
+    {
+        id: 100,
+        img_name: "johdi",
+        category: "Personal payment",
+        sum: -35.0,
+    },
+    {
+        id: 101,
+        img_name: "nike",
+        category: "Shopping",
+        sum: -128.0,
+    },
+    {
+        id: 102,
+        img_name: "mobile",
+        category: "Communication",
+        sum: -10.0,
+    },
+    {
+        id: 103,
+        img_name: "balance_up",
+        category: "Personal payment",
+        sum: 300.0,
+    },
+    {
+        id: 104,
+        img_name: "balance_down",
+        category: "Personal payment",
+        sum: -35.0,
+    },
+];
+
+const data = reactive({
     is_grid_item: true,
-    reports: {
-        type: "bar",
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-        dataSets: [
-            {
-                label: "Benefit",
-                data: [2000, 500, 1000, 1900, 800, 1250],
-                backgroundColor: [
-                    "rgb(255, 99, 132)",
-                    "rgb(54, 162, 235)",
-                    "rgb(255, 205, 86)",
-                    "rgb(28, 117, 219)",
-                    "rgb(28, 219, 69)",
-                    "rgb(111, 28, 219)",
-                ],
-            },
-            {
-                label: "Spending",
-                data: [1000, 700, 1300, 1700, 950, 1300],
-                backgroundColor: [
-                    "rgba(255, 99, 132, 0.5)",
-                    "rgba(54, 162, 235, 0.5)",
-                    "rgba(255, 205, 86, 0.5)",
-                    "rgba(28, 117, 219, 0.5)",
-                    "rgba(28, 219, 69, 0.5)",
-                    "rgba(111, 28, 219, 0.5)",
-                ],
-            },
-        ],
-        options: {
-            plugins: {
-                title: {
-                    display: true,
-                    text: "Report",
-                    padding: {
-                        top: 10,
-                        bottom: 15,
-                    },
-                    color: "#000",
-                    font: {
-                        weight: "bold",
-                        size: 20,
-                    },
-                    fullSize: true,
-                },
-                legend: {
-                    display: false, // легенда графика
-                    position: "bottom",
-                },
-            },
-        },
-    },
-    spending: {
-        type: "pie",
-        labels: ["Personal", "Shopping", "Phone", "Other"],
-        dataSets: [
-            {
-                label: "My First Dataset",
-                data: [2000, 500, 1000, 1700],
-                backgroundColor: [
-                    "rgb(255, 99, 132)",
-                    "rgb(54, 162, 235)",
-                    "rgb(255, 205, 86)",
-                    "rgb(28, 117, 219)",
-                ],
-                hoverOffset: 4,
-            },
-        ],
-        options: {
-            cutout: 100,
-            scales: {
-                gridLines: {
-                    display: false,
-                    drawBorder: false,
-                },
-            },
-            plugins: {
-                title: {
-                    display: true,
-                    text: "Spending this month",
-                    padding: {
-                        top: 10,
-                        bottom: 15,
-                    },
-                    color: "#000",
-                    font: {
-                        weight: "bold",
-                        size: 20,
-                    },
-                    fullSize: true,
-                },
-                legend: {
-                    display: true, // легенда графика
-                    position: "bottom",
-                },
-                tooltips: {
-                    cornerRadius: 0,
-                    caretSize: 0,
-                    xPadding: 16,
-                    yPadding: 10,
-                    backgroundColor: "rgba(0, 150, 100, 0.9)",
-                    titleFontStyle: "normal",
-                    titleMarginBottom: 15,
-                },
-            },
-        },
-    },
-    transactions_list: [
-        {
-            id: 100,
-            img_name: "johdi",
-            category: "Personal payment",
-            sum: -35.0,
-        },
-        {
-            id: 101,
-            img_name: "nike",
-            category: "Shopping",
-            sum: -128.0,
-        },
-        {
-            id: 102,
-            img_name: "mobile",
-            category: "Communication",
-            sum: -10.0,
-        },
-        {
-            id: 103,
-            img_name: "balance_up",
-            category: "Personal payment",
-            sum: 300.0,
-        },
-        {
-            id: 104,
-            img_name: "balance_down",
-            category: "Personal payment",
-            sum: -35.0,
-        },
-    ],
-};
+    reports: null,
+    spending: null,
+    select_wallet: null,
+});
+
+const getWalletsArr = computed(() => {
+    return store.getters.getWalletsArr;
+});
+
+onBeforeMount(() => {
+    data.select_wallet = getWalletsArr.value[0];
+    data.reports = getWalletsArr.value[0].report_data;
+    data.spending = getWalletsArr.value[0].spending_data;
+});
+
+const optionsWallet = computed(() => {
+    return {
+        disabled: false,
+    };
+});
+
+function changeWalletFunction(item) {
+    changeWallet.value.selectedValue = item.value;
+    changeWallet.value.selectedText = item.name;
+
+    data.select_wallet = getWalletsArr.value.find((a) => {
+        return a.id === item.id;
+    });
+
+    data.reports = data.select_wallet.report_data;
+    data.spending = data.select_wallet.spending_data;
+}
 </script>

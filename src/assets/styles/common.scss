@@ -14,6 +14,10 @@ ul, li, a, h1, h2, h3, h4, h5, h6 {
     color: #000;
 }
 
+.mr-10 {
+    margin-right: 10px;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1600px;
@@ -22,6 +26,7 @@ ul, li, a, h1, h2, h3, h4, h5, h6 {
 
 main {
     padding: 0;
+    height: calc(100vh - 60px);
 }
 
 tr  {

@@ -7,6 +7,7 @@
         <div class="modal__close-icon" @click="closeModal"></div>
 
         <slot name="edit-wallet"></slot>
+        <slot name="edit-user"></slot>
     </dialog>
 
     <div @click="closeModal" class="black-layout"></div>

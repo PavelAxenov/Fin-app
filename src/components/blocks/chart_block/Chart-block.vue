@@ -1,12 +1,12 @@
 <template>
     <div class="chart" :class="{ 'grid-item': props.is_grid_item }">
-        <canvas :id="chart_id"></canvas>
+        <canvas :id="props.chart_id"></canvas>
     </div>
 </template>
 
 <script setup>
 import Chart from "chart.js/auto";
-import { onMounted } from "vue";
+import { onMounted, onUpdated, reactive } from "vue";
 
 const props = defineProps({
     chart_id: String,
@@ -14,12 +14,21 @@ const props = defineProps({
     is_grid_item: Boolean,
 });
 
+const data = reactive({
+    myChart: null,
+});
+
 onMounted(() => {
     renderChart(props.settings_for_chart, props.chart_id);
 });
 
+onUpdated(() => {
+    data.myChart.destroy();
+    renderChart(props.settings_for_chart, props.chart_id);
+});
+
 function renderChart(params, chart_id) {
-    new Chart(chart_id, {
+    data.myChart = new Chart(chart_id, {
         type: params.type,
 
         data: {

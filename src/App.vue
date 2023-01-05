@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import Header from "@/components/blocks/header_block/Header.vue";
+import Header from "@/components/blocks/header_block/Header-block.vue";
 import Main from "@/components/pages/main/Main-page.vue";
 
 export default {
