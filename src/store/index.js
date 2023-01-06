@@ -4,6 +4,8 @@ export default new Vuex.Store({
     modules: {},
 
     state: {
+        isAutorise: true,
+        isRegister: false,
         isMenuOpen: false,
         walletsArr: [
             {
@@ -583,7 +585,7 @@ export default new Vuex.Store({
             },
         ],
         userInfo: {
-            name: "Jhon Snow",
+            name: "UserName",
             login: "john215",
             password: "1234ABcd",
         },
@@ -637,6 +639,12 @@ export default new Vuex.Store({
         ],
     },
     getters: {
+        getRegisterStatus(state) {
+            return state.isRegister;
+        },
+        getAutoriseStatus(state) {
+            return state.isAutorise;
+        },
         getCurrency(state) {
             return state.currency;
         },
@@ -654,6 +662,12 @@ export default new Vuex.Store({
         },
     },
     mutations: {
+        setAutoriseStatus(state, status) {
+            state.isAutorise = status;
+        },
+        setRegisterStatus(state, status) {
+            state.isRegister = status;
+        },
         setUserInfo(state, newUserInfo) {
             state.userInfo = newUserInfo;
         },

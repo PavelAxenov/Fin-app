@@ -108,11 +108,13 @@ function closeModal(value) {
 
 function editWallet(item, value) {
     data.edit_wallet = true;
+    data.delete_wallet = false;
     data.editObj = item;
     data.is_modal_open = value;
 }
 
 function deleteWallet(item) {
+    data.edit_wallet = false;
     data.delete_wallet = true;
     data.editObj = item;
     data.is_modal_open = true;
