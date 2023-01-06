@@ -55,19 +55,28 @@
                 text-align: center;
                 text-transform: uppercase;
                 border: none;
-                box-shadow: 0px 0px 10px rgba(28, 117, 219, 0.5);
             }
 
-            .top {
+            .edit {
                 background-color: blue;
                 color: #fff;
                 margin-right: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0px 0px 10px rgba(28, 117, 219, 0.5);
+                }
             }
 
             .withdraw {
                 background-color: #fff;
                 color: blue;
                 border: 2px solid blue;
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0px 0px 10px rgba(28, 117, 219, 0.5);
+                }
             }
         }
     }
@@ -106,19 +115,19 @@
                 align-items: center;
             }
         }
-
     }
 }
 
 .select-wallet {
-    margin: 15px 15px 10px;
+    margin: 0 15px 10px;
+    padding-top: 15px;
 }
 
 #spending {
-    max-height: 371px!important;
-    max-width: 400px!important;
+    max-height: 371px !important;
+    max-width: 400px !important;
 }
 
 #report {
-    max-height: 371px!important;
+    max-height: 371px !important;
 }

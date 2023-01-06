@@ -1,10 +1,12 @@
 .black-layout {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     top: 0;
-    height: 100vh;
-    background: rgb(0 0 0 / 40%);
+    bottom: 0;
+    right: 0;
     left: 0;
+    height: 100%;
+    background: rgb(0 0 0 / 40%);
     z-index: 2;
 }
 
@@ -101,6 +103,28 @@
         height: 30px;
         text-transform: uppercase;
         color: #fff;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 5px grey;
+        }
+    }
+}
+
+.delete {
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__btn {
+        background-color: rgba(0, 0, 255, 0.705);
+        border-radius: 10px;
+        border: 2px solid rgb(17, 0, 255);
+        width: 120px;
+        height: 30px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-right: 15px;
 
         &:hover {
             cursor: pointer;

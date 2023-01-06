@@ -12,8 +12,7 @@
             <h1>Total Balance</h1>
             <strong>$ {{ data.select_wallet.balance }}</strong>
             <div class="dashboard__balance_btn">
-                <button class="top">top up</button>
-                <button class="withdraw">withdraw</button>
+                <button class="edit" @click="editWallet">Edit</button>
             </div>
         </div>
 
@@ -58,9 +57,25 @@
             :is_grid_item="data.is_grid_item"
         />
     </section>
+
+    <ModalWindow
+        v-if="data.is_modal_open"
+        :is_modal_open="data.is_modal_open"
+        @close-modal="closeModal"
+    >
+        <template v-slot:edit-wallet>
+            <ModalEditWallet
+                :editObj="data.select_wallet"
+                @close-modal="closeModal"
+                @update-wallets-arr="updateWalletsArr"
+            />
+        </template>
+    </ModalWindow>
 </template>
 
 <script setup>
+import ModalEditWallet from "@/components/helpers/modal/ModalEditWallet.vue";
+import ModalWindow from "@/components/helpers/modal/ModalWindow.vue";
 import ChartBlock from "@/components/blocks/chart_block/Chart-block.vue";
 import SingleSelect from "@/components/helpers/single_select/SingleSelect.vue";
 import { computed, ref, reactive, onBeforeMount } from "vue";
@@ -108,6 +123,7 @@ const data = reactive({
     reports: null,
     spending: null,
     select_wallet: null,
+    is_modal_open: false,
 });
 
 const getWalletsArr = computed(() => {
@@ -126,6 +142,14 @@ const optionsWallet = computed(() => {
     };
 });
 
+function editWallet() {
+    data.is_modal_open = true;
+}
+
+function closeModal(value) {
+    data.is_modal_open = value;
+}
+
 function changeWalletFunction(item) {
     changeWallet.value.selectedValue = item.value;
     changeWallet.value.selectedText = item.name;
@@ -136,5 +160,10 @@ function changeWalletFunction(item) {
 
     data.reports = data.select_wallet.report_data;
     data.spending = data.select_wallet.spending_data;
+}
+
+function updateWalletsArr(updateObj) {
+    store.commit("setWalletsArr", updateObj);
+    data.is_modal_open = false;
 }
 </script>

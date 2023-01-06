@@ -8,6 +8,7 @@
 
         <slot name="edit-wallet"></slot>
         <slot name="edit-user"></slot>
+        <slot name="delete-wallet"></slot>
     </dialog>
 
     <div @click="closeModal" class="black-layout"></div>

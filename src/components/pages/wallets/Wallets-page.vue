@@ -42,9 +42,19 @@
     >
         <template v-slot:edit-wallet>
             <ModalEditWallet
+                v-if="data.edit_wallet"
                 :editObj="data.editObj"
                 @close-modal="closeModal"
                 @update-wallets-arr="updateWalletsArr"
+            />
+        </template>
+        <template v-slot:delete-wallet>
+            <ModalDeleteWallet
+                v-if="data.delete_wallet"
+                :editObj="data.editObj"
+                @close-modal="closeModal"
+                @delete-wallet="deleteWalletConfirm"
+                @cancel-delete="closeModal"
             />
         </template>
     </ModalWindow>
@@ -52,6 +62,7 @@
 
 <script setup>
 import ModalEditWallet from "@/components/helpers/modal/ModalEditWallet.vue";
+import ModalDeleteWallet from "@/components/helpers/modal/ModalDeleteWallet.vue";
 import ModalWindow from "@/components/helpers/modal/ModalWindow.vue";
 import WalletItem from "@/components/pages/wallets/WalletItem.vue";
 
@@ -64,6 +75,9 @@ const data = reactive({
     is_modal_open: false,
     search_value: "",
     editObj: null,
+    edit_wallet: false,
+    delete_wallet: false,
+    is_loader: false,
 });
 
 const getWalletsArr = computed(() => {
@@ -93,12 +107,20 @@ function closeModal(value) {
 }
 
 function editWallet(item, value) {
+    data.edit_wallet = true;
     data.editObj = item;
     data.is_modal_open = value;
 }
 
-function deleteWallet(id) {
+function deleteWallet(item) {
+    data.delete_wallet = true;
+    data.editObj = item;
+    data.is_modal_open = true;
+}
+
+function deleteWalletConfirm(id) {
     store.commit("setDeleteWallet", id);
+    closeModal(false);
 }
 
 function updateWalletsArr(updateObj) {

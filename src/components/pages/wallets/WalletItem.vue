@@ -43,6 +43,6 @@ function editWallet(item) {
 }
 
 function deleteWallet(item) {
-    emit("delete-wallet", item.id);
+    emit("delete-wallet", item);
 }
 </script>

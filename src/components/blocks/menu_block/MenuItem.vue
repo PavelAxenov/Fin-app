@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="createRoute">
+    <router-link :to="createRoute" @click="closeMenu">
         <li class="navigation__item">
             <img
                 :src="require(`../../../assets/images/menu/${getImgName}.svg`)"
@@ -16,8 +16,9 @@ import { computed } from "vue";
 
 const props = defineProps({
     item: Object,
+    is_menu_open: Boolean,
 });
-
+const emit = defineEmits(["close-menu"]);
 const getImgName = computed(() => {
     return props.item.img_name;
 });
@@ -25,4 +26,8 @@ const getImgName = computed(() => {
 const createRoute = computed(() => {
     return props.item.url;
 });
+
+function closeMenu() {
+    emit("close-menu", !props.is_menu_open);
+}
 </script>

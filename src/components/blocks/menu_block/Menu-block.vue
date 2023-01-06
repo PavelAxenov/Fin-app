@@ -1,19 +1,30 @@
 <template>
-    <ul class="navigation" :class="{ 'navigation--active': isMenuOpen }">
+    <ul
+        class="navigation"
+        :class="{ 'navigation--active': props.is_menu_open }"
+    >
+        <div class="modal__close-icon" @click="closeMenu"></div>
         <MenuItem
             v-for="item in data.menuArr"
             v-bind:key="item.url"
             :item="item"
+            :is_menu_open="is_menu_open"
+            @close-menu="closeMenu"
         />
     </ul>
+    <div
+        v-if="props.is_menu_open"
+        @click="closeMenu"
+        class="black-layout"
+    ></div>
 </template>
 
 <script setup>
 import MenuItem from "@/components/blocks/menu_block/MenuItem.vue";
-import { computed } from "vue";
-import { useStore } from "vuex";
-
-const store = useStore();
+const props = defineProps({
+    is_menu_open: Boolean,
+});
+const emit = defineEmits(["close-menu"]);
 
 const data = {
     menuArr: [
@@ -41,7 +52,10 @@ const data = {
     ],
 };
 
-const isMenuOpen = computed(() => {
-    return store.getters.isMenuOpen;
-});
+function closeMenu(value) {
+    if (value) {
+        emit("close-menu", value);
+    }
+    emit("close-menu", !props.is_menu_open);
+}
 </script>
