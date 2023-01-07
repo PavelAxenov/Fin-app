@@ -36,7 +36,7 @@
                 >
                     <div class="payments__name">
                         <img
-                            class="payments__item-logo"
+                            class="mr-10"
                             :src="
                                 require(`../../../assets/images/transactions/${item.img_name}.svg`)
                             "
