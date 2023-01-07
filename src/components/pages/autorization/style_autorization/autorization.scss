@@ -20,18 +20,18 @@
         align-items: center;
         margin: 40px auto 0;
 
-        &-btn {
-            background-color: rgb(255, 255, 255);
-            border-radius: 10px;
-            width: 120px;
-            height: 30px;
-            color: rgb(0, 0, 0);
+        // &-btn {
+        //     background-color: rgb(255, 255, 255);
+        //     border-radius: 10px;
+        //     width: 120px;
+        //     height: 30px;
+        //     color: rgb(0, 0, 0);
 
-            &:hover {
-                cursor: pointer;
-                box-shadow: 0 0 5px grey;
-            }
-        }
+        //     &:hover {
+        //         cursor: pointer;
+        //         box-shadow: 0 0 5px grey;
+        //     }
+        // }
 
         &-question {
             color: #fff;

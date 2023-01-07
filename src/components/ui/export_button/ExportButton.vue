@@ -1,10 +1,15 @@
 <template>
-    <button v-on:click="exportTable(props.options.id)" class="export-btn">
-        {{ props.options.title }}
-    </button>
+    <Button
+        :label="props.options.title"
+        color="info"
+        rounded
+        @click="exportTable(props.options.id)"
+    />
 </template>
 
 <script setup>
+import Button from "@/components/ui/button/Button-ui.vue";
+
 const props = defineProps({
     options: Object,
 });

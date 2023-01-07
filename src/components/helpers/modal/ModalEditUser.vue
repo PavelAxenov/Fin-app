@@ -6,23 +6,24 @@
         v-model="data.user_name"
     />
     <input
-        class="edit__input"
+        class="edit__input mb-20"
         type="text"
         placeholder="Enter new login"
         v-model="data.user_login"
     />
     <input
-        class="edit__input"
+        class="edit__input mb-20"
         type="password"
         placeholder="Enter new password"
         v-model="data.user_password"
     />
-    <button class="edit__btn" @click="saveUserSettings">Save</button>
+    <Button label="Save" color="info" @click="saveUserSettings" rounded />
 
     <Loader v-if="data.is_loader" />
 </template>
 
 <script setup>
+import Button from "@/components/ui/button/Button-ui.vue";
 import Loader from "@/components/helpers/loader/Loader.vue";
 
 import { reactive } from "vue";

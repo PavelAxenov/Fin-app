@@ -5,15 +5,19 @@
                 props.editObj.name
             }}"?
         </p>
-        <button class="delete__btn mr-15" @click="deleteWallet">Delete</button>
-        <button class="delete__btn mr-15" @click="cancelDeleteWallet">
-            Cancel
-        </button>
+        <Button label="Delete" color="danger" @click="deleteWallet" rounded />
+        <Button
+            label="Cancel"
+            color="info"
+            @click="cancelDeleteWallet"
+            rounded
+        />
     </div>
     <Loader v-if="data.is_loader" />
 </template>
 
 <script setup>
+import Button from "@/components/ui/button/Button-ui.vue";
 import Loader from "@/components/helpers/loader/Loader.vue";
 import { reactive } from "vue";
 

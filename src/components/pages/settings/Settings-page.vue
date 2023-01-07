@@ -1,9 +1,13 @@
 <template>
     <div class="settings-header">
         <h1 class="settings-header__title">Settings</h1>
-        <button class="settings-header__btn" @click="editUserSettings">
-            Edit
-        </button>
+        <Button
+            label="Edit"
+            color="info"
+            @click="editUserSettings"
+            rounded
+            outlined
+        />
     </div>
     <div class="settings-content">
         <h2>User settings</h2>
@@ -62,7 +66,13 @@
                 :dataArray="getCurrency"
                 :changeFunction="changeCurrencyFunction"
             />
-            <button class="btn-submit" @click="createNewWallet">Create</button>
+            <Button
+                class="mb-0"
+                label="Create"
+                color="info"
+                @click="createNewWallet"
+                rounded
+            />
         </div>
 
         <details class="details">
@@ -97,6 +107,7 @@
 </template>
 
 <script setup>
+import Button from "@/components/ui/button/Button-ui.vue";
 import SingleSelect from "@/components/helpers/single_select/SingleSelect.vue";
 import ModalEditUser from "@/components/helpers/modal/ModalEditUser.vue";
 import ModalWindow from "@/components/helpers/modal/ModalWindow.vue";

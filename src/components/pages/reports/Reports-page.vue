@@ -1,7 +1,7 @@
 <template>
     <div class="reports-header">
         <h1 class="reports-header__title">Reports</h1>
-        <ExportBotton :options="optionsForExport" />
+        <ExportButton :options="optionsForExport" />
 
         <div class="reports-header__filters">
             <SingleSelect
@@ -71,7 +71,7 @@
 
 <script setup>
 import SingleSelect from "@/components/helpers/single_select/SingleSelect.vue";
-import ExportBotton from "@/components/helpers/export_botton/ExportBotton.vue";
+import ExportButton from "@/components/ui/export_button/ExportButton.vue";
 
 import { computed, reactive, ref } from "vue";
 

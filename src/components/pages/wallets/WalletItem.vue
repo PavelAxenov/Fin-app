@@ -1,5 +1,5 @@
 <template>
-    <li class="wallets__blocks-item">
+    <li class="wallets-content__blocks-item">
         <div class="item-info">
             <span class="item-info__name">{{ props.item.name }}</span>
             <span class="item-info__balance">{{ props.item.balance }} $</span>
@@ -16,13 +16,13 @@
         </div>
         <div class="item-settings">
             <img
-                class="item-settings--edit"
+                class="item-settings--img w-15"
                 src="../../../assets/images/wallets/edit.svg"
                 alt="edit"
                 @click="editWallet(props.item)"
             />
             <img
-                class="item-settings--delete"
+                class="item-settings--img w-15"
                 src="../../../assets/images/wallets/delete.svg"
                 alt="delete"
                 @click="deleteWallet(props.item)"

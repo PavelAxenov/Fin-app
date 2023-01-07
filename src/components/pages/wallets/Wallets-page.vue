@@ -15,8 +15,8 @@
         </div>
     </div>
 
-    <div class="wallets">
-        <ul class="wallets__blocks">
+    <div class="wallets-content">
+        <ul class="wallets-content__blocks">
             <WalletItem
                 v-for="item in searchName"
                 v-bind:key="item.id"
@@ -30,7 +30,13 @@
             <br />
             You can create a wallet in Settings.
             <router-link to="/settings">
-                <button class="create-wallet-btn">Create wallet</button>
+                <Button
+                    label="Create wallet"
+                    color="info"
+                    size="small"
+                    outlined
+                    rounded
+                />
             </router-link>
         </span>
     </div>
@@ -61,6 +67,7 @@
 </template>
 
 <script setup>
+import Button from "@/components/ui/button/Button-ui.vue";
 import ModalEditWallet from "@/components/helpers/modal/ModalEditWallet.vue";
 import ModalDeleteWallet from "@/components/helpers/modal/ModalDeleteWallet.vue";
 import ModalWindow from "@/components/helpers/modal/ModalWindow.vue";

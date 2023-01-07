@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/mixins';
+
 .select-box {
     position: relative;
     width: 300px;
@@ -80,6 +82,7 @@
 }
 
 .text-elepsis {
+    @include get_fonts("Times New Roman", 20px);
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

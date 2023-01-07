@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/mixins';
+
 .reports {
     &__blocks {
         display: grid;
@@ -155,14 +157,11 @@
                 flex-direction: column;
 
                 .place {
-                    font-family: "Mulish";
-                    font-weight: 800;
-                    font-size: 20px;
+                    @include get_fonts("Mulish", 20px, 800);
                 }
 
                 .category {
-                    font-weight: 500;
-                    font-size: 13px;
+                    @include get_fonts("Mulish", 13px, 500);
                     font-stretch: ultra-expanded;
                     color: rgb(141, 141, 141);
                     margin-top: 5px;
@@ -177,8 +176,7 @@
                 justify-content: center;
 
                 .transfer {
-                    font-family: "Mulish";
-                    font-size: 20px;
+                    @include get_fonts("Mulish", 20px);
 
                     &--green {
                         color: rgb(17 186 14);

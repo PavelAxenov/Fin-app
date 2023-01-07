@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/mixins';
+
 .settings-header {
     display: flex;
     justify-content: space-between;
@@ -20,13 +22,12 @@
         border: none;
         border-radius: 10px;
         color: #fff;
-        font-family: "Mulish";
-        font-size: 25px;
+        @include get_fonts("Mulish", 25px);
 
         @media (max-width: 540px) {
             width: 100px;
             height: 30px;
-            font-size: 20px;
+            @include get_fonts("Mulish", 20px);
         }
 
         &:hover {
@@ -73,26 +74,6 @@
             max-width: 300px;
         }
 
-        .btn-submit {
-            width: 100px;
-            height: 25px;
-            background-color: rgba(0, 0, 255, 0.5);
-            border: none;
-            border-radius: 10px;
-            color: #fff;
-            font-family: "Mulish";
-            font-size: 20px;
-
-            @media (max-width: 540px) {
-                font-size: 18px;
-            }
-
-            &:hover {
-                cursor: pointer;
-                box-shadow: 0 0 5px grey;
-            }
-        }
-
         .wallet-name {
             width: calc(100% - 20px);
 
@@ -103,8 +84,7 @@
     }
 
     .details {
-        font-family: "Mulish";
-        font-size: 20px;
+        @include get_fonts("Mulish", 20px);
         max-width: 300px;
 
         summary {

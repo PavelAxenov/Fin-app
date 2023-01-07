@@ -37,16 +37,19 @@
                 Already have an account?
                 <a href="#" @click="openAutorizeWindow">Autorize</a>
             </p>
-
-            <button class="registration__form-btn" @click="registration">
-                Registration
-            </button>
+            <Button
+                label="Registration"
+                color="success"
+                @click="registration"
+                rounded
+            />
         </div>
     </div>
     <Loader v-if="data.is_loader" />
 </template>
 
 <script setup>
+import Button from "@/components/ui/button/Button-ui.vue";
 import Loader from "@/components/helpers/loader/Loader.vue";
 
 import { reactive } from "vue";

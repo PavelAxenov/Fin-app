@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/mixins';
+
 .navigation {
     position: fixed;
     display: grid;
@@ -28,6 +30,10 @@
         padding: 10px;
         width: 250px;
 
+        @media (max-width: 426px) {
+            padding-left: 20px;
+        }
+
         &:hover {
             background-color: rgba(163, 163, 163, 0.3);
         }
@@ -38,8 +44,7 @@
         }
 
         &_text {
-            font-size: medium;
-            font-weight: 500;
+            @include get_fonts("Mulish", 20px, 500);
         }
     }
 

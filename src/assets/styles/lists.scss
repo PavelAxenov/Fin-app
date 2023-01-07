@@ -22,10 +22,18 @@ $margins-top: 5, 15, 40;
     }
 }
 
-$margins-bottom: 15, 20;
+$margins-bottom: 0, 15, 20;
 
 @each $margin in $margins-bottom {
     .mb-#{$margin} {
-        margin-bottom: #{$margin}px;
+        margin-bottom: #{$margin}px !important;
+    }
+}
+
+$widths: 15, 270;
+
+@each $width in $widths {
+    .w-#{$width} {
+        width: #{$width}px !important;
     }
 }

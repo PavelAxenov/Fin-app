@@ -1,0 +1,110 @@
+@import '../../../../assets/styles/mixins';
+
+.btn {
+    @include get_fonts("Mulish", 20px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    height: 40px;
+    color: #fff;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    min-width: 100px;
+    max-width: fit-content;
+
+    @media (max-width: 540px) {
+        @include get_fonts("Mulish", 18px);
+    }
+
+    &_primary {
+        background: var(--primary);
+        border: 1px solid var(--primary);
+
+        &:enabled:hover {
+            background: var(--primary-hover);
+        }
+    }
+
+    &_second {
+        background: var(--second);
+        border: 1px solid var(--second);
+
+        &:enabled:hover {
+            background: var(--second-hover);
+        }
+    }
+
+    &_success {
+        background: var(--success);
+        border: 1px solid var(--success);
+
+        &:enabled:hover {
+            background: var(--success-hover);
+        }
+    }
+
+    &_info {
+        background: var(--info);
+        border: 1px solid var(--info);
+
+        &:enabled:hover {
+            background: var(--info-hover);
+        }
+    }
+
+    &_warning {
+        background: var(--warning);
+        border: 1px solid var(--warning);
+
+        &:enabled:hover {
+            background: var(--warning-hover);
+        }
+    }
+
+    &_danger {
+        background: var(--danger);
+        border: 1px solid var(--danger);
+
+        &:enabled:hover {
+            background: var(--danger-hover);
+        }
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: default;
+    }
+
+    &_rounded {
+        border-radius: 20px;
+    }
+
+    &_outlined {
+        background: transparent;
+        color: #000;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &_icon {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    &_small {
+        height: 30px;
+        padding: 0 20px;
+        font-size: 18px;
+    }
+
+    &_large {
+        height: 48px;
+        padding: 0 30px;
+    }
+}

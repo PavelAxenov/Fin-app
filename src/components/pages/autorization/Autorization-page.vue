@@ -26,16 +26,14 @@
                 Don't have an account?
                 <a href="#" @click="openRegisterWindow">Register</a>
             </p>
-
-            <button class="autorization__form-btn" @click="signIn">
-                Sign in
-            </button>
+            <Button label="Sign in" color="success" @click="signIn" rounded />
         </div>
     </div>
     <Loader v-if="data.is_loader" />
 </template>
 
 <script setup>
+import Button from "@/components/ui/button/Button-ui.vue";
 import Loader from "@/components/helpers/loader/Loader.vue";
 import { useStore } from "vuex";
 import { reactive } from "vue";

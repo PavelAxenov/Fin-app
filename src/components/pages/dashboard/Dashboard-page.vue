@@ -11,9 +11,13 @@
         <div class="grid-item dashboard__balance">
             <h1>Total Balance</h1>
             <strong>$ {{ data.select_wallet.balance }}</strong>
-            <div class="dashboard__balance_btn">
-                <button class="edit" @click="editWallet">Edit</button>
-            </div>
+            <Button
+                label="Edit"
+                color="info"
+                rounded
+                :disabled="data.select_wallet.balance === 0"
+                @click="editWallet"
+            />
         </div>
 
         <ChartBlock
@@ -78,6 +82,7 @@ import ModalEditWallet from "@/components/helpers/modal/ModalEditWallet.vue";
 import ModalWindow from "@/components/helpers/modal/ModalWindow.vue";
 import ChartBlock from "@/components/blocks/chart_block/Chart-block.vue";
 import SingleSelect from "@/components/helpers/single_select/SingleSelect.vue";
+import Button from "@/components/ui/button/Button-ui.vue";
 import { computed, ref, reactive, onBeforeMount } from "vue";
 import { useStore } from "vuex";
 

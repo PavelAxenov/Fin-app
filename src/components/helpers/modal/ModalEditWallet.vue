@@ -1,6 +1,6 @@
 <template>
     <input
-        class="input modal__title"
+        class="w-270 mb-15"
         type="text"
         maxlength="15"
         v-model="data.name_of_wallet"
@@ -8,29 +8,30 @@
     <span class="modal__balance">{{ props.editObj.balance }} $</span>
     <input
         type="number"
-        class="input modal__sum"
+        class="w-270 mb-15 mt-15"
         step="10"
         min="10"
         max="1000000"
         placeholder="Enter amount"
         v-model="data.input_sum"
     />
-    <div class="btn-box mt-15">
-        <button
-            class="btn"
-            :class="{ disabled: props.editObj.balance === 0 }"
-            :disabled="props.editObj.balance === 0"
+    <div class="btn-box">
+        <Button
+            label="Withdraw"
+            color="info"
             @click="withdrawMoney"
-        >
-            withdraw
-        </button>
-        <button class="btn" @click="topUpMoney">top up</button>
+            rounded
+            outlined
+            :disabled="props.editObj.balance === 0"
+        />
+        <Button label="Top up" color="info" @click="topUpMoney" rounded />
     </div>
 
     <Loader v-if="data.is_loader" />
 </template>
 
 <script setup>
+import Button from "@/components/ui/button/Button-ui.vue";
 import Loader from "@/components/helpers/loader/Loader.vue";
 import { reactive } from "vue";
 

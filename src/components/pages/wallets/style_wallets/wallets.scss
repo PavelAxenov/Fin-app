@@ -43,7 +43,7 @@
 }
 
 
-.wallets {
+.wallets-content {
     padding: 0 10px;
     margin-top: 20px;
 
@@ -99,36 +99,14 @@
                 flex-direction: row;
                 justify-content: center;
                 margin-top: 15px;
-                gap: 20px;
+                gap: 35px;
 
-                &--edit {
-                    width: 15px;
-
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-                &--delete {
-                    width: 15px;
-
+                &--img {
                     &:hover {
                         cursor: pointer;
                     }
                 }
             }
         }
-    }
-}
-
-.create-wallet-btn {
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 255, 0.592);
-    color: #fff;
-    height: 25px;
-
-    &:hover{
-        cursor: pointer;
-            box-shadow: 0px 0px 5px rgba(28, 117, 219, 0.5);
     }
 }
