@@ -4,7 +4,7 @@
             <img
                 :src="require(`../../../assets/images/menu/${getImgName}.svg`)"
                 :alt="item.img_name"
-                class="navigation__item_img"
+                class="mr-10"
             />
             <p v-text="item.name" class="navigation__item_text"></p>
         </li>

@@ -23,7 +23,7 @@
         />
 
         <div class="grid-item dashboard__transactions">
-            <h1>Latest Transactions</h1>
+            <h1 class="mb-15">Latest Transactions</h1>
             <div class="payments">
                 <div
                     v-for="item in transactions_list"

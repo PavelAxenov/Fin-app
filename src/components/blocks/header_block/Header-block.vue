@@ -21,7 +21,7 @@
                 <img
                     src="../../../assets/images/user-icon.svg"
                     alt="icon"
-                    class="user__icon"
+                    class="user__icon ml-15"
                 />
             </router-link>
         </section>

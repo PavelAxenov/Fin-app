@@ -1,12 +1,14 @@
 <template>
     <div class="delete">
-        <p class="delete__title">
+        <p class="mb-15">
             Are you sure you want to delete your wallet "{{
                 props.editObj.name
             }}"?
         </p>
-        <button class="delete__btn" @click="deleteWallet">Delete</button>
-        <button class="delete__btn" @click="cancelDeleteWallet">Cancel</button>
+        <button class="delete__btn mr-15" @click="deleteWallet">Delete</button>
+        <button class="delete__btn mr-15" @click="cancelDeleteWallet">
+            Cancel
+        </button>
     </div>
     <Loader v-if="data.is_loader" />
 </template>

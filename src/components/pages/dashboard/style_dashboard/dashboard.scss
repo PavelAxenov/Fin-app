@@ -60,7 +60,6 @@
             .edit {
                 background-color: blue;
                 color: #fff;
-                margin-right: 10px;
 
                 &:hover {
                     cursor: pointer;
@@ -86,7 +85,6 @@
             font-weight: 900;
             font-size: 25px;
             line-height: 31px;
-            margin-bottom: 15px;
         }
 
         .payments {
@@ -98,10 +96,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-
-                &-logo {
-                    margin-right: 10px;
-                }
 
                 &-category {
                     font-weight: 800;
@@ -130,4 +124,13 @@
 
 #report {
     max-height: 371px !important;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(28, 117, 219, 0.5);
+    padding: 15px 20px;
+    border-radius: 20px;
 }

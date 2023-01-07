@@ -28,7 +28,6 @@
 
         &-count {
             font-size: 20px;
-            margin-right: 15px;
 
             @media (max-width: 540px) {
                 font-size: 18px;
@@ -36,10 +35,6 @@
         }
 
         &-search {
-            border-radius: 10px;
-            border-color: rgba(128, 128, 128, 0.199);
-            padding: 0 10px;
-
             @media (max-width: 540px) {
                 width: 120px;
             }

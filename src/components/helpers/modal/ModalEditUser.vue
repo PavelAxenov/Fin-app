@@ -1,6 +1,6 @@
 <template>
     <input
-        class="edit__input"
+        class="edit__input mb-20"
         type="text"
         placeholder="Enter new name"
         v-model="data.user_name"

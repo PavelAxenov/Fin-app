@@ -1,0 +1,31 @@
+$margins-right: 0, 10, 15, 20;
+
+@each $margin in $margins-right {
+    .mr-#{$margin} {
+        margin-right: #{$margin}px;
+    }
+}
+
+$margins-left: 15;
+
+@each $margin in $margins-left {
+    .ml-#{$margin} {
+        margin-left: #{$margin}px;
+    }
+}
+
+$margins-top: 5, 15, 40;
+
+@each $margin in $margins-top {
+    .mt-#{$margin} {
+        margin-top: #{$margin}px;
+    }
+}
+
+$margins-bottom: 15, 20;
+
+@each $margin in $margins-bottom {
+    .mb-#{$margin} {
+        margin-bottom: #{$margin}px;
+    }
+}

@@ -1,6 +1,6 @@
 <template>
     <input
-        class="modal__title"
+        class="input modal__title"
         type="text"
         maxlength="15"
         v-model="data.name_of_wallet"
@@ -8,14 +8,14 @@
     <span class="modal__balance">{{ props.editObj.balance }} $</span>
     <input
         type="number"
-        class="modal__sum"
+        class="input modal__sum"
         step="10"
         min="10"
         max="1000000"
         placeholder="Enter amount"
         v-model="data.input_sum"
     />
-    <div class="btn-box">
+    <div class="btn-box mt-15">
         <button
             class="btn"
             :class="{ disabled: props.editObj.balance === 0 }"

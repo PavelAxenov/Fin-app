@@ -17,7 +17,7 @@
     z-index: 3;
     border: none;
     top: 40%;
-    padding: 30px 15px 15px;
+    padding: 30px 30px 15px 15px;
     width: 300px;
     border-radius: 20px;
 
@@ -38,12 +38,10 @@
 
     &__title {
         margin: 0 0 15px;
-        max-width: 70%;
     }
 
     &__sum {
         margin: 15px 0;
-        max-width: 70%;
     }
 
     &__balance {
@@ -56,7 +54,6 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        margin-top: 15px;
 
         .btn {
             background-color: #fff;
@@ -86,7 +83,6 @@
 
 .edit {
     &__input {
-        margin-bottom: 20px;
         max-width: 250px;
         border-radius: 10px;
         border-color: rgba(128, 128, 128, 0.199);
@@ -112,9 +108,6 @@
 }
 
 .delete {
-    &__title {
-        margin-bottom: 15px;
-    }
 
     &__btn {
         background-color: rgba(0, 0, 255, 0.705);
@@ -124,7 +117,6 @@
         height: 30px;
         text-transform: uppercase;
         color: #fff;
-        margin-right: 15px;
 
         &:hover {
             cursor: pointer;

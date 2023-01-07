@@ -11,7 +11,7 @@
                 name="login"
                 id="login"
                 minlength="3"
-                class="registration__form-input"
+                class="mb-20 input"
                 placeholder="Enter your name"
                 v-model="data.user_name"
             />
@@ -20,7 +20,7 @@
                 name="login"
                 id="login"
                 minlength="5"
-                class="registration__form-input"
+                class="mb-20 input"
                 placeholder="Enter your login"
                 v-model="data.user_login"
             />
@@ -29,11 +29,11 @@
                 name="password"
                 id="password"
                 minlength="6"
-                class="registration__form-input"
+                class="mb-20 input"
                 placeholder="Enter your password"
                 v-model="data.user_password"
             />
-            <p class="registration__form-question">
+            <p class="registration__form-question mb-20">
                 Already have an account?
                 <a href="#" @click="openAutorizeWindow">Autorize</a>
             </p>

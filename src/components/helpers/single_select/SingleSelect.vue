@@ -23,7 +23,7 @@ Callback function when option selecting changes by user
             :class="{ disabled: data.disabled }"
             @click="toggleMenu()"
         >
-            <div class="arrow arrow-top"></div>
+            <div class="arrow mr-0 arrow-top"></div>
 
             <p
                 class="text-elepsis"
@@ -32,7 +32,7 @@ Callback function when option selecting changes by user
                 {{ displayText }}
             </p>
         </button>
-        <div ref="dropdownRef" v-show="dropdown" class="select-box__drop">
+        <div ref="dropdownRef" v-show="dropdown" class="select-box__drop mt-5">
             <ul class="select-box__drop_list">
                 <li
                     v-for="(item, index) in data.dataSet"

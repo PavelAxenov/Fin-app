@@ -3,13 +3,13 @@
         <h1 class="wallets-header__title">Wallets</h1>
 
         <div class="wallets-header__info">
-            <span class="wallets-header__info-count">
+            <span class="wallets-header__info-count mr-15">
                 Total wallets: {{ getWalletsArr.length }}
             </span>
             <input
                 type="text"
                 placeholder="name of wallet"
-                class="wallets-header__info-search"
+                class="input wallets-header__info-search"
                 v-model="data.search_value"
             />
         </div>

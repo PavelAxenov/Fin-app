@@ -10,7 +10,7 @@
                 type="text"
                 name="login"
                 id="login"
-                class="autorization__form-input"
+                class="mb-20 input"
                 placeholder="Enter your login"
                 v-model="data.user_login"
             />
@@ -18,11 +18,11 @@
                 type="password"
                 name="password"
                 id="password"
-                class="autorization__form-input"
+                class="mb-20 input"
                 placeholder="Enter your password"
                 v-model="data.user_password"
             />
-            <p class="autorization__form-question">
+            <p class="autorization__form-question mb-20">
                 Don't have an account?
                 <a href="#" @click="openRegisterWindow">Register</a>
             </p>

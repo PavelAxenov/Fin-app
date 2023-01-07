@@ -47,7 +47,7 @@
                 placeholder="Enter account name"
                 required
                 maxlength="15"
-                class="wallet-name"
+                class="input wallet-name"
                 v-model="data.new_wallet_name"
             />
             <SingleSelect
