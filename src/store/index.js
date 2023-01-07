@@ -4,7 +4,7 @@ export default new Vuex.Store({
     modules: {},
 
     state: {
-        isAutorise: false,
+        isAutorise: true,
         isRegister: false,
         isMenuOpen: false,
         walletsArr: [
