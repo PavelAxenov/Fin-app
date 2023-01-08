@@ -41,6 +41,7 @@ https://fin-app-eta.vercel.app/
 -   Vue
 -   Vuex
 -   Vue-router
+-   Composition API
 -   SCSS
 
 ## Функциональность
